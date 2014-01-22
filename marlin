@@ -21,4 +21,26 @@ echo: M304 H0
  B3960 R4700 T100000
  FPU Enabled no
 
+# new motor:
+SENDING:M501
+echo:Stored settings retreived:
+echo:Steps per unit:
+echo:  M92 X91.429 Y91.429 Z4000.000 E100.000
+echo:Maximum feedrates (mm/s):
+echo:  M203 X300.000 Y300.000 Z3.000 E45.000
+echo:Maximum Acceleration (mm/s2):
+echo:  M201 X800 Y800 Z30 E800
+echo:Acceleration: S=acceleration, T=retract acceleration
+echo:  M204 S1000.000 T1000.000
+echo:Advanced variables: S=Min feedrate (mm/s), T=Min travel feedrate (mm/s), B=minimum segment time (ms), X=maximum xY jerk (mm/s),  Z=maximum Z jerk (mm/s), K=advance_k
+echo:  M205 S0.000 T0.000 B20000 X15.000 Z0.400 E15.000
+echo:  M206 X0.000 Y0.000 Z0.000
+echo:  M208 X210.000 Y210.000 Z140.000
+echo:PID settings:
+echo:   M301 P12.000 I2.200 D80.000 W125
+echo:Thermistor settings: M304 Hh Bb Rr Tt, H0=Bed, H1..n=nozzle, b=thermistor beta value, r=series resistor, t=thermistor resistance as 25C
+echo: M304 H0
+ B3480 R4700 T10000 M304 H1
+ B3960 R4700 T100000
+ FPU Enabled no
 
